@@ -1,0 +1,67 @@
+---
+import { Stethoscope, Activity, Syringe, HeartPulse, Baby, ClipboardList } from 'lucide-react';
+
+const services = [
+  {
+    title: 'Hausärztliche Versorgung',
+    description: 'Umfassende Betreuung bei akuten und chronischen Erkrankungen für die ganze Familie.',
+    icon: Stethoscope
+  },
+  {
+    title: 'Diabetologie',
+    description: 'Spezialisierte Betreuung für Typ 1 und Typ 2 Diabetiker (DDG zertifiziert).',
+    icon: Activity
+  },
+  {
+    title: 'Vorsorge & Check-ups',
+    description: 'Gesundheitsuntersuchungen (Check-up 35+), Krebsvorsorge und Hautkrebsscreening.',
+    icon: ClipboardList
+  },
+  {
+    title: 'Ultraschall (Sonographie)',
+    description: 'Moderne Diagnostik der Bauchorgane und der Schilddrüse.',
+    icon: HeartPulse
+  },
+  {
+    title: 'Impfungen',
+    description: 'Alle Standardimpfungen gemäß STIKO sowie Reiseimpfberatung.',
+    icon: Syringe
+  },
+  {
+    title: 'Jugendschutzuntersuchungen',
+    description: 'Vorsorgeuntersuchungen für Jugendliche (J1) und Jugendarbeitsschutzuntersuchungen.',
+    icon: Baby
+  }
+];
+---
+
+<section id="leistungen" class="py-16 md:py-24 bg-teal-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-teal-900 font-heading sm:text-4xl">Unsere Leistungen</h2>
+      <p class="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
+        Wir bieten Ihnen ein breites Spektrum der Allgemeinmedizin und spezialisierte Leistungen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-stone-100 group">
+          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+            <service.icon size={24} />
+          </div>
+          <h3 class="text-xl font-bold text-teal-900 mb-3 font-heading">{service.title}</h3>
+          <p class="text-stone-600 leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center">
+        <p class="text-stone-500 text-sm">
+            Dies ist ein Auszug unseres Leistungsspektrums. Bitte sprechen Sie uns an, wenn Sie Fragen zu speziellen Untersuchungen haben.
+        </p>
+    </div>
+  </div>
+</section>

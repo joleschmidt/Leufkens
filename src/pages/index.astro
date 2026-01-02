@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OpeningHours from '../components/OpeningHours.astro';
+import Services from '../components/Services.astro';
+import Team from '../components/Team.astro';
+import Contact from '../components/Contact.astro';
+import { ArrowRight, Phone } from 'lucide-react';
+---
+
+<Layout title="Gemeinschaftspraxis Leufkens - Allgemeinmedizin in Sinn">
+	
+	<!-- Hero Section -->
+	<section class="relative h-[calc(100vh-5rem)] flex items-center bg-stone-900 text-white overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.pexels.com/photos/4269202/pexels-photo-4269202.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920" 
+                alt="Freundliches Praxisteam am Empfang" 
+                class="w-full h-full object-cover opacity-60"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-800/75"></div>
+        </div>
+        
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+			<div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-teal-500/20 text-teal-100 border border-teal-400/30 text-sm font-medium mb-6 backdrop-blur-sm">
+                    Hausärztliche Versorgung & Diabetologie
+                </span>
+				<h1 class="text-4xl md:text-5xl lg:text-7xl font-bold font-heading mb-8 tracking-tight leading-tight text-white drop-shadow-lg">
+					Gesundheit in <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-teal-300 drop-shadow-md">guten Händen.</span>
+				</h1>
+				<p class="text-xl md:text-2xl text-white mb-10 leading-relaxed max-w-2xl font-light drop-shadow-md">
+					Willkommen in der Gemeinschaftspraxis Leufkens in Sinn. <br>
+                    Wir nehmen uns Zeit für Sie – persönlich, kompetent und nah.
+				</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#oeffnungszeiten" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-full text-teal-900 bg-white hover:bg-stone-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Öffnungszeiten
+                        <ArrowRight className="ml-2 -mr-1 h-5 w-5" />
+                    </a>
+                    <a href="tel:0277251220" class="inline-flex items-center justify-center px-8 py-4 border-2 border-teal-400/50 text-base font-bold rounded-full text-white hover:bg-teal-800/50 transition-all backdrop-blur-sm">
+                        <Phone className="mr-2 -ml-1 h-5 w-5" />
+                        02772 - 51220
+                    </a>
+                </div>
+			</div>
+		</div>
+	</section>
+
+    <!-- Welcome Section with Image -->
+    <section class="py-20 md:py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-stone-100 rounded-full z-0"></div>
+                    <img 
+                        src="https://images.pexels.com/photos/7904416/pexels-photo-7904416.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                        alt="Ärztin im Gespräch" 
+                        class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[500px]"
+                    />
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-teal-900 font-heading mb-8 sm:text-4xl">
+                        Liebe Patientinnen, <br>liebe Patienten,
+                    </h2>
+                    <div class="prose prose-lg prose-stone text-stone-600 leading-relaxed">
+                        <p class="mb-6">
+                            willkommen auf unserer Internetseite. Hier finden Sie alle Angebote und Informationen unserer Praxis zum Nachlesen.
+                        </p>
+                        <p class="mb-6">
+                            Wir arbeiten alle mit großem Engagement und sind bemüht möglichst freundlich, schnell und sorgfältig zu sein. Vergessen Sie dabei bitte nicht, dass auch wir nur Menschen mit Fehlern und Schwächen sind. Darum sind wir auf Ihre Mithilfe angewiesen. Nur so kann eine gute Organisation mit wenigen Störungen zu einem funktionierenden Ganzen werden.
+                        </p>
+                        <blockquote class="border-l-4 border-teal-500 pl-4 italic bg-stone-50 p-4 rounded-r-lg my-6">
+                            "Unser Ziel ist es, Sie medizinisch kompetent und menschlich zugewandt zu betreuen."
+                        </blockquote>
+                        <p class="font-bold text-teal-800 text-lg">
+                            Ihr Praxisteam Leufkens & Dr. Ismer-Leufkens
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <OpeningHours />
+
+    <Services />
+    
+    <Team />
+
+    <Contact />
+
+</Layout>

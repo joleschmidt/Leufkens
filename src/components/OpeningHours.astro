@@ -1,0 +1,137 @@
+---
+import { Clock, Calendar, Phone } from 'lucide-react';
+---
+
+<section id="oeffnungszeiten" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-teal-900 font-heading sm:text-4xl">Öffnungszeiten</h2>
+      <p class="mt-4 text-xl text-stone-600">Bitte vereinbaren Sie telefonisch einen Termin.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Allgemeine Sprechzeiten -->
+      <div class="bg-stone-50 rounded-2xl p-8 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="bg-teal-100 p-3 rounded-full text-teal-700">
+            <Clock size={24} />
+          </div>
+          <h3 class="text-xl font-bold text-teal-900 font-heading">Praxiszeiten</h3>
+        </div>
+        <ul class="space-y-4 text-stone-700">
+          <li class="flex justify-between border-b border-stone-200 pb-2">
+            <span class="font-medium">Montag</span>
+            <div class="text-right">
+              <span>7:30 - 12:00</span><br>
+              <span>15:00 - 18:00</span>
+            </div>
+          </li>
+          <li class="flex justify-between border-b border-stone-200 pb-2">
+            <span class="font-medium">Dienstag</span>
+            <div class="text-right">
+              <span>7:30 - 12:00</span><br>
+              <span>15:00 - 18:00</span>
+            </div>
+          </li>
+          <li class="flex justify-between border-b border-stone-200 pb-2">
+            <span class="font-medium">Mittwoch</span>
+            <div class="text-right">
+              <span>7:30 - 12:00</span><br>
+              <span class="text-stone-500 text-sm">(Notfallsprechstunde)</span>
+            </div>
+          </li>
+          <li class="flex justify-between border-b border-stone-200 pb-2">
+            <span class="font-medium">Donnerstag</span>
+            <div class="text-right">
+              <span>7:30 - 12:00</span><br>
+              <span>15:00 - 18:00</span>
+            </div>
+          </li>
+          <li class="flex justify-between">
+            <span class="font-medium">Freitag</span>
+            <div class="text-right">
+              <span>7:30 - 12:00</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Spezielle Sprechstunden -->
+      <div class="bg-stone-50 rounded-2xl p-8 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="bg-teal-100 p-3 rounded-full text-teal-700">
+            <Calendar size={24} />
+          </div>
+          <h3 class="text-xl font-bold text-teal-900 font-heading">Spezialsprechstunden</h3>
+        </div>
+        
+        <div class="mb-6">
+          <h4 class="font-bold text-teal-800 mb-2">Dr. med. Ulrike Ismer-Leufkens</h4>
+          <p class="text-sm text-stone-600 mb-2">Inkl. Sonographie</p>
+          <div class="flex justify-between text-stone-700">
+            <span>Dienstag</span>
+            <div class="text-right">
+              <span>8:00 - 12:00</span><br>
+              <span>15:00 - 20:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-teal-800 mb-2">Notfallsprechstunde</h4>
+          <p class="text-sm text-stone-600 mb-2">Nur mit telefonischer Voranmeldung!</p>
+          <div class="flex justify-between text-stone-700">
+            <span>Mittwoch</span>
+            <span>7:30 - 12:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Telefonsprechstunde -->
+      <div class="bg-stone-50 rounded-2xl p-8 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="bg-teal-100 p-3 rounded-full text-teal-700">
+            <Phone size={24} />
+          </div>
+          <h3 class="text-xl font-bold text-teal-900 font-heading">Telefonsprechstunde</h3>
+        </div>
+        
+        <div class="space-y-4 text-stone-700">
+          <div>
+             <h4 class="font-bold text-teal-800 text-sm uppercase tracking-wide">Hubert Leufkens</h4>
+             <div class="flex justify-between">
+                <span>Mo, Di, Do</span>
+                <span>12:30 - 13:00</span>
+             </div>
+          </div>
+          
+          <div>
+             <h4 class="font-bold text-teal-800 text-sm uppercase tracking-wide">Dr. U. Ismer-Leufkens</h4>
+             <div class="flex justify-between">
+                <span>Dienstag</span>
+                <span>12:30 - 13:00</span>
+             </div>
+          </div>
+
+          <div>
+             <h4 class="font-bold text-teal-800 text-sm uppercase tracking-wide">Friederike Nickel</h4>
+             <div class="flex justify-between">
+                <span>Mo, Do</span>
+                <span>12:30 - 13:00</span>
+             </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-stone-200">
+            <h4 class="font-bold text-teal-800 mb-2">Rezept-Telefon</h4>
+            <a href="tel:02772957136" class="text-lg font-bold text-teal-600 hover:text-teal-700">02772 - 957136</a>
+            <p class="text-xs text-stone-500 mt-2">
+                Bestellte Rezepte liegen am nächsten Werktag ab 15 Uhr bereit (außer Mi & Fr).
+            </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
