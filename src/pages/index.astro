@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import OpeningHours from '../components/OpeningHours.astro';
 import Services from '../components/Services.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Team from '../components/Team.astro';
 import Contact from '../components/Contact.astro';
 import { ArrowRight, Phone } from 'lucide-react';
@@ -14,15 +15,15 @@ import { ArrowRight, Phone } from 'lucide-react';
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img 
-                src="https://images.pexels.com/photos/4269202/pexels-photo-4269202.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920" 
-                alt="Freundliches Praxisteam am Empfang" 
+                src="https://images.pexels.com/photos/7108325/pexels-photo-7108325.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920" 
+                alt="Freundlicher Empfang in der Praxis" 
                 class="w-full h-full object-cover opacity-60"
             />
-            <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-800/75"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-stone-900/70 to-stone-800/40"></div>
         </div>
         
-		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-			<div class="max-w-3xl">
+		<div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+			<div class="max-w-3xl mr-auto">
                 <span class="inline-block py-1 px-3 rounded-full bg-teal-500/20 text-teal-100 border border-teal-400/30 text-sm font-medium mb-6 backdrop-blur-sm">
                     Hausärztliche Versorgung & Diabetologie
                 </span>
@@ -56,8 +57,8 @@ import { ArrowRight, Phone } from 'lucide-react';
                 <div class="relative">
                     <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-stone-100 rounded-full z-0"></div>
                     <img 
-                        src="https://images.pexels.com/photos/7904416/pexels-photo-7904416.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                        alt="Ärztin im Gespräch" 
+                        src="https://images.pexels.com/photos/4266936/pexels-photo-4266936.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                        alt="Ärztin im vertrauensvollen Gespräch" 
                         class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[500px]"
                     />
                 </div>
@@ -68,10 +69,10 @@ import { ArrowRight, Phone } from 'lucide-react';
                     </h2>
                     <div class="prose prose-lg prose-stone text-stone-600 leading-relaxed">
                         <p class="mb-6">
-                            willkommen auf unserer Internetseite. Hier finden Sie alle Angebote und Informationen unserer Praxis zum Nachlesen.
+                            Willkommen in unserer Hausarztpraxis. Wir verstehen uns als Ihre ersten Ansprechpartner in allen Gesundheitsfragen – persönlich, kompetent und nah.
                         </p>
                         <p class="mb-6">
-                            Wir arbeiten alle mit großem Engagement und sind bemüht möglichst freundlich, schnell und sorgfältig zu sein. Vergessen Sie dabei bitte nicht, dass auch wir nur Menschen mit Fehlern und Schwächen sind. Darum sind wir auf Ihre Mithilfe angewiesen. Nur so kann eine gute Organisation mit wenigen Störungen zu einem funktionierenden Ganzen werden.
+                            Unser Anspruch ist es, uns Zeit für Sie zu nehmen und gut zuzuhören. Wir behandeln nicht nur Symptome, sondern sehen den ganzen Menschen. Ob "Jung oder Alt", wir begleiten Sie und Ihre Familie oft über viele Jahre hinweg. Dabei verbinden wir moderne Medizin mit menschlicher Zuwendung.
                         </p>
                         <blockquote class="border-l-4 border-teal-500 pl-4 italic bg-stone-50 p-4 rounded-r-lg my-6">
                             "Unser Ziel ist es, Sie medizinisch kompetent und menschlich zugewandt zu betreuen."
@@ -88,6 +89,8 @@ import { ArrowRight, Phone } from 'lucide-react';
     <OpeningHours />
 
     <Services />
+
+    <!-- <Testimonials /> -->
     
     <Team />
 
