@@ -14,7 +14,7 @@ import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react'
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
       <div>
-        <h2 class="text-3xl font-bold font-heading mb-6">Termin vereinbaren</h2>
+        <h2 class="text-3xl font-bold font-heading mb-6 text-white">Termin vereinbaren</h2>
         <p class="text-teal-100 text-lg mb-8 leading-relaxed">
           Möchten Sie einen Termin vereinbaren? Füllen Sie einfach das Formular aus und wir rufen Sie schnellstmöglich zurück, um den Termin zu bestätigen.
         </p>
@@ -25,7 +25,7 @@ import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react'
               <Phone class="text-teal-300" size={24} />
             </div>
             <div>
-              <h3 class="font-bold text-xl">Rückruf-Service</h3>
+              <h3 class="font-bold text-xl text-white">Rückruf-Service</h3>
               <p class="text-teal-200 mt-1">Wir melden uns telefonisch bei Ihnen zur Terminabsprache.</p>
             </div>
           </div>
@@ -34,7 +34,7 @@ import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react'
               <Clock class="text-teal-300" size={24} />
             </div>
             <div>
-              <h3 class="font-bold text-xl">Zeit sparen</h3>
+              <h3 class="font-bold text-xl text-white">Zeit sparen</h3>
               <p class="text-teal-200 mt-1">Vermeiden Sie Wartezeiten am Telefon.</p>
             </div>
           </div>
@@ -52,7 +52,7 @@ import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react'
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <User size={18} class="text-stone-400" />
                         </div>
-                        <input type="text" id="name" name="body" required class="block w-full pl-10 border-stone-300 rounded-md focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-2 border" placeholder="Ihr Name">
+                        <input type="text" id="name" name="body" required class="block w-full pl-10 border-stone-300 rounded-lg focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-3 text-base border shadow-sm transition-shadow focus:shadow-md" placeholder="Ihr Name">
                     </div>
                 </div>
                  <div>
@@ -61,7 +61,7 @@ import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react'
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <Phone size={18} class="text-stone-400" />
                         </div>
-                        <input type="tel" id="phone" name="body" required class="block w-full pl-10 border-stone-300 rounded-md focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-2 border" placeholder="Ihre Nummer">
+                        <input type="tel" id="phone" name="body" required class="block w-full pl-10 border-stone-300 rounded-lg focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-3 text-base border shadow-sm transition-shadow focus:shadow-md" placeholder="Ihre Nummer">
                     </div>
                 </div>
             </div>
@@ -72,11 +72,11 @@ import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react'
                     <div class="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
                         <MessageSquare size={18} class="text-stone-400" />
                     </div>
-                    <textarea id="reason" name="body" rows="3" class="block w-full pl-10 border-stone-300 rounded-md focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-2 border" placeholder="Kurze Beschreibung oder gewünschte Uhrzeit"></textarea>
+                    <textarea id="reason" name="body" rows="3" class="block w-full pl-10 border-stone-300 rounded-lg focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-3 text-base border shadow-sm transition-shadow focus:shadow-md" placeholder="Kurze Beschreibung oder gewünschte Uhrzeit"></textarea>
                 </div>
             </div>
 
-            <button type="submit" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors uppercase tracking-wide">
+            <button type="submit" class="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-lg shadow-md text-base font-bold text-white bg-teal-600 hover:bg-teal-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-all uppercase tracking-wide transform hover:-translate-y-0.5">
                 Rückruf anfordern
             </button>
             <p class="text-xs text-stone-500 text-center mt-4">
