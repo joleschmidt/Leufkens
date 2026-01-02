@@ -1,19 +1,24 @@
 # Active Context
 
 ## Current Focus
-Initialization of the Memory Bank to document the project state and guide future development. The project is currently a functioning Astro website with a complete homepage structure.
+Enhancing the UX and content strategy based on "Expert Web Design" critique.
+- Implemented "Zero-Friction" features: Prescription button, Appointment Form.
+- Highlighted key medical differentiation (Diabetology).
+- Added "News" section for dynamic updates.
 
 ## Recent Changes
-- **Project Structure**: Standard Astro layout with `src/pages`, `src/components`, `src/layouts`.
-- **Dependencies**: Setup with Tailwind CSS v4, React, and Lucide React.
-- **Content**: Home page (`index.astro`) implements Hero, Welcome, OpeningHours, Services, Team, and Contact sections.
+- **Header**: Added "Rezept" quick-action button.
+- **New Components**:
+  - `AppointmentRequest.astro`: Digital appointment request form (mailto-based).
+  - `News.astro`: Banner for latest updates (e.g., Flu shots).
+- **Services**: Enhanced `Services.astro` to highlight "Diabetologie" with distinct styling.
+- **Homepage**: Integrated new components into `index.astro`.
 
 ## Active Decisions
-- **Styling**: Using Tailwind CSS (v4) for rapid, utility-first styling.
-- **Icons**: Using `lucide-react` for consistent iconography.
-- **Framework**: Astro as the main framework for performance, with React for interactive components if needed (though mostly static so far).
+- **Form Handling**: Used `mailto` for the appointment form as a low-tech, static-friendly solution. Can be upgraded to Formspree later.
+- **Design**: Maintained Teal/Stone palette but added high-contrast "Call to Action" elements.
 
 ## Next Steps
-- **Review Components**: Verify the implementation of individual components (OpeningHours, Services, etc.) which were imported but not deep-dived yet.
-- **Content Verification**: Ensure placeholder text/images are replaced with real content if available.
-- **Feature Completion**: The `Testimonials` component is currently commented out in `index.astro`. Decide whether to implement or remove.
+- **Review**: Check responsiveness of the new form and header button.
+- **Content**: Replace placeholder images with real ones if/when available.
+- **SEO**: Add schema markup for MedicalPractice.

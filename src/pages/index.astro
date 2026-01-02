@@ -5,11 +5,15 @@ import Services from '../components/Services.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Team from '../components/Team.astro';
 import Contact from '../components/Contact.astro';
+import AppointmentRequest from '../components/AppointmentRequest.astro';
+import News from '../components/News.astro';
 import { ArrowRight, Phone } from 'lucide-react';
 ---
 
 <Layout title="Gemeinschaftspraxis Leufkens - Allgemeinmedizin in Sinn">
 	
+    <News />
+
 	<!-- Hero Section -->
 	<section class="relative h-[calc(100vh-5rem)] flex items-center bg-stone-900 text-white overflow-hidden">
         <!-- Background Image -->
@@ -87,6 +91,8 @@ import { ArrowRight, Phone } from 'lucide-react';
     </section>
 
     <OpeningHours />
+
+    <AppointmentRequest />
 
     <Services />
 

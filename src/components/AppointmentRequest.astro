@@ -1,0 +1,90 @@
+---
+import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react';
+---
+
+<section id="termin" class="py-16 bg-teal-900 text-white relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+      <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor" />
+      </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold font-heading mb-6">Termin vereinbaren</h2>
+        <p class="text-teal-100 text-lg mb-8 leading-relaxed">
+          Möchten Sie einen Termin vereinbaren? Füllen Sie einfach das Formular aus und wir rufen Sie schnellstmöglich zurück, um den Termin zu bestätigen.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-teal-800 p-3 rounded-lg shrink-0">
+              <Phone class="text-teal-300" size={24} />
+            </div>
+            <div>
+              <h3 class="font-bold text-xl">Rückruf-Service</h3>
+              <p class="text-teal-200 mt-1">Wir melden uns telefonisch bei Ihnen zur Terminabsprache.</p>
+            </div>
+          </div>
+           <div class="flex items-start gap-4">
+            <div class="bg-teal-800 p-3 rounded-lg shrink-0">
+              <Clock class="text-teal-300" size={24} />
+            </div>
+            <div>
+              <h3 class="font-bold text-xl">Zeit sparen</h3>
+              <p class="text-teal-200 mt-1">Vermeiden Sie Wartezeiten am Telefon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-2xl text-stone-800">
+        <form class="space-y-6" action="mailto:info@praxis-leufkens.de" method="GET" enctype="text/plain">
+            <input type="hidden" name="subject" value="Terminanfrage über Website" />
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-stone-700 mb-1">Name</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <User size={18} class="text-stone-400" />
+                        </div>
+                        <input type="text" id="name" name="body" required class="block w-full pl-10 border-stone-300 rounded-md focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-2 border" placeholder="Ihr Name">
+                    </div>
+                </div>
+                 <div>
+                    <label for="phone" class="block text-sm font-medium text-stone-700 mb-1">Telefonnummer</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <Phone size={18} class="text-stone-400" />
+                        </div>
+                        <input type="tel" id="phone" name="body" required class="block w-full pl-10 border-stone-300 rounded-md focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-2 border" placeholder="Ihre Nummer">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="reason" class="block text-sm font-medium text-stone-700 mb-1">Grund / Wunschtermin (Optional)</label>
+                 <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
+                        <MessageSquare size={18} class="text-stone-400" />
+                    </div>
+                    <textarea id="reason" name="body" rows="3" class="block w-full pl-10 border-stone-300 rounded-md focus:ring-teal-500 focus:border-teal-500 bg-stone-50 py-2 border" placeholder="Kurze Beschreibung oder gewünschte Uhrzeit"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors uppercase tracking-wide">
+                Rückruf anfordern
+            </button>
+            <p class="text-xs text-stone-500 text-center mt-4">
+                Dies öffnet Ihr E-Mail-Programm.
+            </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

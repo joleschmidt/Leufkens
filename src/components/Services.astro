@@ -9,8 +9,9 @@ const services = [
   },
   {
     title: 'Diabetologie',
-    description: 'Spezialisierte Betreuung für Typ 1 und Typ 2 Diabetiker (DDG zertifiziert).',
-    icon: Activity
+    description: 'Spezialisierte Schwerpunktpraxis für Typ 1 und Typ 2 Diabetiker (DDG zertifiziert). Beratung, Schulung und Einstellung.',
+    icon: Activity,
+    highlight: true
   },
   {
     title: 'Vorsorge & Check-ups',
@@ -46,12 +47,32 @@ const services = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((service) => (
-        <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-stone-100 group">
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+        <div class={`rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border group relative overflow-hidden ${
+            service.highlight 
+            ? 'bg-teal-800 border-teal-700 text-white transform md:-translate-y-2 md:shadow-xl' 
+            : 'bg-white border-stone-100'
+        }`}>
+          {service.highlight && (
+              <div class="absolute top-0 right-0 bg-teal-500 text-xs font-bold px-2 py-1 text-white rounded-bl-lg">
+                  Schwerpunkt
+              </div>
+          )}
+          
+          <div class={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-colors ${
+              service.highlight 
+              ? 'bg-white/10 text-teal-300 group-hover:bg-white/20 group-hover:text-white'
+              : 'bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white'
+          }`}>
             <service.icon size={24} />
           </div>
-          <h3 class="text-xl font-bold text-teal-900 mb-3 font-heading">{service.title}</h3>
-          <p class="text-stone-600 leading-relaxed">
+          
+          <h3 class={`text-xl font-bold mb-3 font-heading ${
+              service.highlight ? 'text-white' : 'text-teal-900'
+          }`}>{service.title}</h3>
+          
+          <p class={`leading-relaxed ${
+              service.highlight ? 'text-teal-100' : 'text-stone-600'
+          }`}>
             {service.description}
           </p>
         </div>

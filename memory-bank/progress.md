@@ -5,21 +5,23 @@
 - [x] Global Layout (Header, Footer)
 - [x] Home Page Structure
   - [x] Hero Section
+  - [x] News/Aktuelles Section (New)
   - [x] Welcome Section
-  - [x] Opening Hours (Component exists)
-  - [x] Services (Component exists)
-  - [x] Team (Component exists)
-  - [x] Contact (Component exists)
+  - [x] Opening Hours
+  - [x] Appointment Request Form (New)
+  - [x] Services (Enhanced with Diabetology Highlight)
+  - [x] Team
+  - [x] Contact
 - [x] Legal Pages
-  - [x] Impressum (`src/pages/impressum.astro`)
-  - [x] Datenschutz (`src/pages/datenschutz.astro`)
+  - [x] Impressum
+  - [x] Datenschutz
 
 ## In Progress
 - [ ] Content Refinement (Replacing placeholders)
-- [ ] Component implementation review (checking details of sub-components)
+- [ ] Mobile Menu polish (ensure new buttons fit)
 
 ## Planned / To Do
 - [ ] Enable/Finalize Testimonials (`index.astro`: currently commented out)
-- [ ] SEO Optimization (Meta tags, descriptions - basic setup in Layout)
-- [ ] Accessibility Audit
-- [ ] Image Optimization (checking if local images are needed vs external URLs currently used)
+- [ ] SEO Optimization (Meta tags, Schema.org)
+- [ ] Accessibility Audit (Check form labels and contrasts)
+- [ ] Image Optimization
